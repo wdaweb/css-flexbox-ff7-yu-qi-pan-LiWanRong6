@@ -1,0 +1,131 @@
+body{
+    margin: 100px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: '標楷體';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ChineseChess{
+    width: 1000px;
+    height: 1100px;
+    border:1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-size: 2.5rem;
+    font-weight: 500;
+    writing-mode: vertical-lr;
+    align-self: flex-start;
+}
+.checkerboard .row {
+    width: 800px;
+    height: 100px;
+    border:1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.checkerboard .row .col{
+    width: 100px;
+    height: 100px;
+    border:1px solid black;
+}
+.row:first-child .col:nth-child(4),.col:nth-child(5){
+    position: relative;
+}
+
+.row:first-child .col:nth-child(4)::before{
+    content: '';
+    width: 100%;
+    border: 1px solid rgb(44, 44, 44);
+    position: absolute;
+    transform-origin: left top;
+    transform: rotate(45.5deg) scale(2.82,1);
+}
+
+.row:first-child .col:nth-child(5)::before{
+    content: '';
+    width: 100%;
+    border: 1px solid rgb(44, 44, 44);
+    position: absolute;
+    transform-origin: right;
+    transform: rotate(315deg) scale(2.82,1);
+}
+
+.row:nth-child(8) .col:nth-child(4),.col:nth-child(5){
+    position: relative;
+}
+.row:nth-child(8) .col:nth-child(4)::before{
+    content: '';
+    width: 100%;
+    border: 1px solid rgb(44, 44, 44);
+    position: absolute;
+    transform-origin: left top;
+    transform: rotate(45.5deg) scale(2.82,1);
+}
+
+.row:nth-child(8) .col:nth-child(5)::before{
+    content: '';
+    width: 100%;
+    border: 1px solid rgb(44, 44, 44);
+    position: absolute;
+    transform-origin: right;
+    transform: rotate(315deg) scale(2.82,1);
+}
+.checkerboard .row:nth-child(5) .col{
+    width: 800px;
+    height: 100px;
+    border:1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.row:nth-child(5) .col p{
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin: 0 10%;
+}
+/* 棋子 */
+.black-pieces,.red-pieces{
+    width: 860px;
+    height: 410px;
+    position:absolute;
+    left:50%;
+    transform: translateX(-50%);
+}
+.black-pieces{
+    top:20%;
+}
+.red-pieces{
+     top:95%;
+    color:red;
+}
+.pieces{
+    display:flex ;
+    justify-content: space-between;
+}
+.black-pieces .pieces:nth-child(2){
+    margin-top: 130px;
+    margin-bottom: 50px;
+    justify-content: space-around;
+}
+.red-pieces .pieces:nth-child(2){
+    margin-bottom: 130px;
+    margin-top: 50px;
+    justify-content: space-around;
+}
+.piece{
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 2rem;
+    background: white;
+    border: 2px solid black;
+    padding: 10px 12px;
+    border-radius: 50%;
+    text-align: center;
+}
